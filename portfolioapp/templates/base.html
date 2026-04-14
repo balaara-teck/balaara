@@ -1,0 +1,143 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'css/dist/styles.css' %}" rel="stylesheet">
+    <title>Balaara Solomon | Bridging Education & Technology</title>
+</head>
+
+<body class="bg-gray-950 text-gray-100 scroll-smooth font-sans">
+
+<nav class="sticky top-0 z-50 backdrop-blur-md bg-gray-950/80 border-b border-gray-800 px-6 md:px-16 py-4">
+    <div class="flex justify-between items-center">
+        <a href="{% url 'home' %}" class="flex items-center">
+            <img src="{% static 'media/photos/balaarashortlogo.jpg' %}" alt="Logo" class="h-10 w-auto block md:hidden rounded-lg">
+            <img src="{% static 'media/photos/balaarafulllogo.jpg' %}" alt="Full Logo" class="h-10 w-auto hidden md:block">
+        </a>
+
+        <ul class="hidden md:flex gap-8 text-sm font-medium text-gray-400">
+            <li><a href="{% url 'home' %}" class="hover:text-blue-400 transition">Home</a></li>
+            <li><a href="{% url 'profile' %}" class="hover:text-blue-400 transition">Me</a></li>
+            <li><a href="{% url 'home' %}#about" class="hover:text-blue-400 transition">About</a></li>
+            <li><a href="{% url 'home' %}#skills" class="hover:text-blue-400 transition">Skills</a></li>
+            <li><a href="{% url 'home' %}#projects" class="hover:text-blue-400 transition">Projects</a></li>
+            <li><a href="{% url 'home' %}#certifications" class="hover:text-blue-400 transition">Certifications</a></li>
+            <li><a href="{% url 'home' %}#contact" class="hover:text-blue-400 transition">Contact</a></li>
+        </ul>
+
+        <button id="menu-btn" class="md:hidden text-gray-300">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+        </button>
+    </div>
+
+    <ul id="mobile-menu" class="hidden flex-col gap-4 mt-4 text-gray-400 pb-4 md:hidden">
+        <li><a href="{% url 'home' %}#home" class="block hover:text-white">Home</a></li>
+        <li><a href="{% url 'profile' %}" class="hover:text-blue-400 transition">Me</a></li>
+        <li><a href="{% url 'home' %}#about" class="block hover:text-white">About</a></li>
+        <li><a href="{% url 'home' %}#skills" class="block hover:text-white">Skills</a></li>
+        <li><a href="{% url 'home' %}#certifications" class="hover:text-blue-400 transition">Certifications</a></li>
+        <li><a href="{% url 'home' %}#projects" class="block hover:text-white">Projects</a></li>
+        <li><a href="#contact" class="block hover:text-white">Contact</a></li>
+    </ul>
+</nav>
+
+{% if messages %}
+    <div class="w-100 text-center mx-auto mb-6">
+        {% for message in messages %}
+            <div class="bg-white text-green-800 px-4 py-1 rounded-lg shadow">
+                {{ message }}
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}
+
+{% block content %}
+
+
+{% endblock %}
+<!-- footer -->
+
+<footer class="py-12 border-t border-gray-900 text-center text-gray-600 text-sm">
+    <div class="flex flex-row gap-2 justify-center">
+     <a href="{% url 'home' %}">
+     <img src="{% static 'media/photos/balaarashortlogo.jpg' %}" alt="Logo" class="h-10 w-auto block md:hidden rounded-lg">
+     <img src="{% static 'media/photos/balaarafulllogo.jpg' %}" alt="Full Logo" class="h-10 w-auto hidden md:block">
+     </a>
+     <p class="mt-2">© 2026 Balaara Solomon Ankyelle • Educator & Developer</p>
+    </div>
+</footer>
+
+<!-- scripts section    -->
+<script>
+    // Navigation Toggle
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+
+    // About Me Toggle
+    function toggleAbout() {
+        const extra = document.getElementById('extra-content');
+        const btnText = document.getElementById('read-more-btn');
+        if (extra.classList.contains('hidden')) {
+            extra.classList.remove('hidden');
+            btnText.innerText = 'Read Less ↑';
+        } else {
+            extra.classList.add('hidden');
+            btnText.innerText = 'Read My Story ↓';
+        }
+    }
+
+    const toggleBtn = document.getElementById('toggleProjects');
+    const extraProjects = document.querySelectorAll('.extra-project');
+
+    toggleBtn.addEventListener('click', function () {
+        const isHidden = extraProjects[0].classList.contains('hidden');
+
+        extraProjects.forEach(project => {
+            project.classList.toggle('hidden');
+        });
+
+        toggleBtn.textContent = isHidden
+            ? 'Show Less Projects'
+            : 'View More Projects';
+    });
+
+    const openBtn = document.getElementById('openCvModal');
+    const modal = document.getElementById('cvModal');
+    const closeBtn = document.getElementById('closeCvModal');
+    const closeFooterBtn = document.getElementById('closeCvModalBtn');
+
+    // Open modal
+    openBtn.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+        document.body.classList.add('overflow-hidden'); // Prevent background scrolling
+    });
+
+    // Close modal
+    function closeModal() {
+        modal.classList.add('hidden');
+        document.body.classList.remove('overflow-hidden');
+    }
+
+    closeBtn.addEventListener('click', closeModal);
+    closeFooterBtn.addEventListener('click', closeModal);
+
+    // Close when clicking outside the modal
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+
+    // Close with ESC key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeModal();
+        }
+    });
+</script>
+
+</body>
+</html>

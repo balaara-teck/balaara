@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="px-6 md:px-16 py-20 bg-gray-950 text-gray-100 min-h-screen">
+
+    <div class="max-w-5xl mx-auto">
+
+        <!-- Page Title -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4">
+                Personal Profile
+            </h1>
+            <p class="text-gray-400 max-w-2xl mx-auto">
+                A brief overview of my background, family, and personal information that shapes who I am as an educator and developer.
+            </p>
+        </div>
+
+        <!-- Profile Card -->
+        <div class="bg-gray-900 border border-gray-800 rounded-3xl shadow-2xl p-8 md:p-12">
+
+            <!-- Header: Image and Name -->
+            <div class="flex flex-col md:flex-row items-center gap-8 mb-10">
+                <img src="{% static 'media/photos/azontophotoone.jpg' %}"
+     alt="Balaara Solomon"
+     class="w-40 h-40 rounded-full object-cover object-top shadow-lg border-4 border-blue-500/30">
+
+                <div class="text-center md:text-left">
+                    <h2 class="text-3xl font-bold">Balaara Solomon Ankyelle</h2>
+                    <p class="text-blue-400 mt-2">Mathematics & ICT Educator | Full-Stack Developer</p>
+                    <p class="text-gray-400 mt-2">📍 Kaleo, Upper West Region, Ghana</p>
+                </div>
+            </div>
+
+            <!-- Personal Information Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <!-- Contact Information -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
+                        Contact Information
+                    </h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><span class="font-semibold text-white">Phone:</span> 0536073305</li>
+                        <li><span class="font-semibold text-white">Email:</span> balaarasolomon9@gmail.com</li>
+                        <li><span class="font-semibold text-white">GitHub:</span> github.com/balaara-teck</li>
+                        <li><span class="font-semibold text-white">LinkedIn:</span> linkedin.com/in/balaara-solomon</li>
+                    </ul>
+                </div>
+
+                <!-- Family Information -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
+                        Family Background
+                    </h3>
+                    <ul class="space-y-2 text-gray-300">
+                         <li><span class="font-semibold text-white">Father:</span>Francis Balaara Kampile</li>
+                        <li><span class="font-semibold text-white">Mother:</span> Faustina Wulbudong</li>
+                       
+                        <li>
+                            <span class="font-semibold text-white">Siblings:</span>
+                            <ul class="list-disc list-inside ml-4 mt-1">
+                                <li>Jennifer Balaara</li>
+                                <li>Abena Balaara</li>
+                                <li>Kwaku Balaara</li>
+                                <li>Afia Balaara</li>
+                                <li>Lawrencia Balaara</li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Personal Details -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
+                        Personal Details
+                    </h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><span class="font-semibold text-white">Place of Origin:</span> Tanduori, UW/R, Ghana</li>
+                        <li><span class="font-semibold text-white">Nationality:</span> Ghanaian</li>
+                        <li><span class="font-semibold text-white">Languages:</span> Twi, Dagaare, English, Beginner Chinese (Mandarin)</li>
+                        <li><span class="font-semibold text-white">Profession:</span> Educator & Full-Stack Developer</li>
+                    </ul>
+                </div>
+
+                <!-- Professional Summary -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
+                        Professional Summary
+                    </h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        I am a dedicated Mathematics and ICT educator with a strong passion for technology and innovation. 
+                        My expertise extends into full-stack web development, where I design and build digital solutions 
+                        aimed at improving education and empowering communities. I am committed to lifelong learning, 
+                        leadership, and making a meaningful impact through technology.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Call to Action -->
+            <div class="text-center mt-12">
+                <a href="{% static 'documents/Balaara_Solomon_CV.pdf' %}" download
+                   class="inline-block px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-full shadow-lg transition">
+                    Download CV
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+{% endblock %}
