@@ -64,7 +64,7 @@ EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
 
 DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL', EMAIL_HOST_USER)
 
-TAILWIND_APP_NAME = 'theme'
+
 NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
 
 
@@ -150,3 +150,5 @@ STATICFILES_DIRS = [
 ]
 
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+TAILWIND_APP_NAME = 'theme'
