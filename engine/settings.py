@@ -44,6 +44,16 @@ INSTALLED_APPS = [
    
 ]
 
+# Email Configuration (Gmail SMTP)
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+EMAIL_HOST_USER = 'balaarasolomon9@gmail.com'
+EMAIL_HOST_PASSWORD = 'yfnb jaul mprg ifgh'  # Use Gmail App Password
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
 TAILWIND_APP_NAME = 'theme'
 NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
 
