@@ -88,7 +88,7 @@
             btnText.innerText = 'Read My Story ↓';
         }
     }
-
+// Projects Toggle
     const toggleBtn = document.getElementById('toggleProjects');
     const extraProjects = document.querySelectorAll('.extra-project');
 
@@ -104,39 +104,20 @@
             : 'View More Projects';
     });
 
+//    cv modal toggle
     const openBtn = document.getElementById('openCvModal');
     const modal = document.getElementById('cvModal');
     const closeBtn = document.getElementById('closeCvModal');
-    const closeFooterBtn = document.getElementById('closeCvModalBtn');
 
-    // Open modal
-    openBtn.addEventListener('click', () => {
-        modal.classList.remove('hidden');
-        document.body.classList.add('overflow-hidden'); // Prevent background scrolling
-    });
+    openBtn.onclick = () => modal.classList.remove('hidden');
+    closeBtn.onclick = () => modal.classList.add('hidden');
 
-    // Close modal
-    function closeModal() {
-        modal.classList.add('hidden');
-        document.body.classList.remove('overflow-hidden');
-    }
-
-    closeBtn.addEventListener('click', closeModal);
-    closeFooterBtn.addEventListener('click', closeModal);
-
-    // Close when clicking outside the modal
-    modal.addEventListener('click', (e) => {
+    window.onclick = (e) => {
         if (e.target === modal) {
-            closeModal();
+            modal.classList.add('hidden');
         }
-    });
+    };
 
-    // Close with ESC key
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            closeModal();
-        }
-    });
 </script>
 
 </body>

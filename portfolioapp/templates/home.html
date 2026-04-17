@@ -5,7 +5,7 @@
 {% block content %}
 
 <!-- Hero section -->
-<section id="home" class="relative min-h-[90vh] flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-16 py-20">
+<section id="home" class="relative min-h-[90vh] flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-16 py-6">
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(59,130,246,0.1),transparent_50%)]"></div>
     
     <div class="relative w-full md:w-1/2 z-10">
@@ -21,51 +21,44 @@
             <a href="#projects" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-4 rounded-full transition-all transform hover:scale-105 shadow-xl shadow-blue-900/20">
                 View My Work
             </a>
-          <!-- Trigger Button -->
-            <button id="openCvModal"
-                class="border border-gray-700 hover:border-blue-400 hover:text-blue-400 px-8 py-4 rounded-full transition-all">
-                View / Download CV
-            </button>
-            <!-- CV Modal -->
+         <!-- Trigger Button -->
+<button id="openCvModal"
+    class="border border-gray-700 hover:border-blue-400 hover:text-blue-400 px-8 py-4 rounded-full transition-all">
+    My CV
+</button>
+
+<!-- CV Modal -->
 <div id="cvModal"
      class="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 hidden">
 
-    <!-- Modal Content -->
-    <div class="bg-white rounded-2xl w-[95%] md:w-[85%] lg:w-[70%] h-[85vh] shadow-2xl relative overflow-hidden">
+    <!-- Modal Box -->
+    <div class="bg-white rounded-2xl w-[90%] md:w-[400px] p-8 shadow-2xl text-center relative">
 
-        <!-- Header -->
-        <div class="flex justify-between items-center p-4 border-b">
-            <h3 class="text-lg font-semibold text-gray-800">Balaara Solomon - Curriculum Vitae</h3>
-            <button id="closeCvModal" class="text-gray-500 hover:text-red-500 text-2xl">&times;</button>
-        </div>
+        <!-- Close Icon -->
+        <button id="closeCvModal" class="absolute top-3 right-4 text-gray-500 hover:text-red-500 text-2xl">
+            &times;
+        </button>
 
-        <!-- PDF Preview -->
-        <iframe src="{% static 'media/files/Balaara_Solomon_Ankyelle_CV.pdf' %}"
-                class="w-full h-[calc(100%-120px)]"
-                frameborder="0">
-        </iframe>
+        <h3 class="text-xl font-bold text-gray-800 mb-6">
+            Choose an option
+        </h3>
 
-        <!-- Footer Actions -->
-        <div class="flex flex-wrap justify-end gap-4 p-4 border-t bg-gray-50">
-            <!-- Open in New Tab -->
+        <div class="flex flex-col gap-4">
+
+            <!-- View CV -->
             <a href="{% static 'media/files/Balaara_Solomon_Ankyelle_CV.pdf' %}"
                target="_blank"
-               class="px-4 py-2 border border-gray-300 text-green-700 rounded-lg hover:bg-gray-100 transition">
-                Open in New Tab
+               class="w-full px-4 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">
+                View CV
             </a>
 
-            <!-- Download -->
+            <!-- Download CV -->
             <a href="{% static 'media/files/Balaara_Solomon_Ankyelle_CV.pdf' %}"
                download="Balaara_Solomon_CV.pdf"
-               class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
-                Download
+               class="w-full px-4 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+                Download CV
             </a>
 
-            <!-- Close -->
-            <button id="closeCvModalBtn"
-                class="px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-900 transition">
-                Close
-            </button>
         </div>
     </div>
 </div>
@@ -81,7 +74,7 @@
 </section>
 <!-- About Section -->
 
-<section id="about" class="px-6 md:px-16 py-24 bg-gray-900/50">
+<section id="about" class="px-6 md:px-16 py-8 bg-gray-900/50">
     <div class="max-w-4xl mx-auto">
         <h2 class="text-3xl font-bold mb-12 flex items-center gap-4">
             <span class="h-px flex-1 bg-gray-800"></span>
@@ -147,7 +140,7 @@
 </section>
 <!-- Skills Section -->
 
-<section id="skills" class="px-6 md:px-16 py-24 border-t border-gray-800">
+<section id="skills" class="px-6 md:px-16 py-8 border-t border-gray-800">
      <h2 class="text-3xl font-bold mb-12 flex items-center gap-4">
             <span class="h-px flex-1 bg-gray-800"></span>
             Skills & Expertise
@@ -179,7 +172,7 @@
 </section>
 <!-- Projects Section -->
 
-<section id="projects" class="px-6 md:px-16 py-20 bg-gray-900/30">
+<section id="projects" class="px-6 md:px-16 py-8 bg-gray-900/30">
     <h2 class="text-3xl md:text-4xl font-black mb-12 text-center">
         Featured Projects
     </h2>
@@ -362,7 +355,7 @@
 </section>
 <!-- Certifications Section  -->
 
-<section id="certifications" class="px-6 md:px-16 py-24 border-t border-gray-800 bg-gray-950">
+<section id="certifications" class="px-6 md:px-16 py-8 border-t border-gray-800 bg-gray-950">
     <div class="max-w-6xl mx-auto">
         <h2 class="text-3xl font-bold mb-12 flex items-center gap-4">
             Certifications
@@ -439,7 +432,7 @@
 </section>
 <!-- Hobbies & Interests Section -->
 
-<section id="hobbies" class="px-6 md:px-16 py-24 border-t border-gray-800 bg-gray-950">
+<section id="hobbies" class="px-6 md:px-16 py-8 border-t border-gray-800 bg-gray-950">
     <div class="max-w-6xl mx-auto">
         <h2 class="text-3xl font-bold mb-12 flex items-center gap-4">
             Hobbies & Interests
@@ -513,7 +506,7 @@
 </section>
 <!-- Contact Section -->
 
-<section id="contact" class="px-6 md:px-16 py-24 bg-blue-600 text-white">
+<section id="contact" class="px-6 md:px-16 py-8 bg-blue-600 text-white">
     <div class="max-w-6xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             

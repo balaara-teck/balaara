@@ -12,7 +12,7 @@ class ContactMessageForm(forms.ModelForm):
                 'class': 'w-full bg-gray-100 border-none rounded-xl py-4 px-6 text-black focus:ring-2 focus:ring-blue-500 transition'
             }),
             'email': forms.EmailInput(attrs={
-                'placeholder': 'email@example.com',
+                'placeholder': 'azontostick90@gmail.com',
                 'class': 'w-full bg-gray-100 border-none rounded-xl py-4 px-6 text-black focus:ring-2 focus:ring-blue-500 transition'
             }),
             'message': forms.Textarea(attrs={
