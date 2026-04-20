@@ -14,7 +14,7 @@ v/
 # Django
 *.mo
 *.db
-media/
+
 
 # Static files (if collected)
 staticfiles/
