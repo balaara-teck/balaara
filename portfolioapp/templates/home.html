@@ -5,21 +5,28 @@
 {% block content %}
 
 <!-- Hero section -->
-<section id="home" class="relative min-h-[90vh] flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-16 py-12">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(59,130,246,0.1),transparent_50%)]"></div>
-    
-    <div class="relative w-full md:w-1/2 z-10">
-        <h2 class="text-blue-400 font-mono mb-4">Hello, I'm Balaara</h2>
-        <h1 class="text-5xl md:text-7xl font-black leading-tight tracking-tight">
-            Bridging <span class="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Education</span> & Coding.
+<section id="home" class="relative min-h-[90vh] flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-16 py-20 h-[400px] bg-[url('/static/media/photos/azontophotoone.jpg')] bg-cover bg-[center_10%] bg-no-repeat">
+   
+   
+    <div class="w-full md:w-1/2 z-10">
+       <h3 class=" font-mono mb-4">
+            Hello, I'm 
+            <span id="typing-name" class="border-r-2 border-blue-400 pr-1"></span>
+       </h3>
+
+        <h1 class="text-3xl  font-black leading-tight tracking-tight">
+            <span id="changing-text"
+                class="bg-gradient-to-r from-blue-200 to-yellow-600 through-yellow-900 bg-clip-text text-transparent border-r-2 border-purple-400 pr-1">
+            </span>
         </h1>
-        <p class="mt-6 text-gray-400 text-md  max-w-xl leading-relaxed">
-            Professional teacher of Mathematics and Computing who has successfully transitioned into a self-taught AI-assisted Full-Stack Software Developer. Passionate about building intelligent digital solutions that empower students and modernize the lives of people. Combines strong pedagogical expertise, leadership, and public relations experience with skills in full-stack web development and software innovation. Committed to leveraging technology to enhance education, solve real-world problems, and drive community development.
-        </p>
+
+       <p class="mt-6 text-yellow-200 text-sm sm:text-base md:text-md max-w-sm sm:max-w-md md:max-w-xl leading-relaxed px-2 sm:px-0">
+         To apply my expertise as an AI-assisted Full-Stack Software Developer and my foundation in Mathematics and Computing education to design intelligent, scalable solutions that transform learning and solve real-world problems. I aim to contribute innovative thinking, technical excellence, and leadership to organizations that are shaping the future through technology, while driving meaningful impact in education and community development.
+      </p>
 
         <div class="mt-10 flex gap-4">
             <a href="#projects" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-4 rounded-full transition-all transform hover:scale-105 shadow-xl shadow-blue-900/20">
-                View My Work
+                View My Work 
             </a>
          <!-- Trigger Button -->
         <button id="openCvModal"
@@ -27,7 +34,7 @@
             My CV
         </button>
 
-<!-- CV Modal -->
+        <!-- CV Modal -->
         <div id="cvModal"
             class="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 hidden">
 
@@ -66,19 +73,14 @@
         </div>
     </div>
 
-    <div class="relative w-full md:w-5/12 mb-12 md:mb-0">
-        <div class="absolute -inset-4 bg-gradient-to-tr from-blue-500 to-purple-600 blur-2xl opacity-20 animate-pulse"></div>
-       <img src="{% static 'media/photos/azontophotoone.jpg' %}" 
-     alt="Balaara Solomon" 
-     class="relative rounded-2xl transition duration-700 shadow-2xl border border-gray-800 w-full aspect-[4/5] object-cover object-[center_20%]">
-    </div>
+   
 </section>
 <!-- About Section -->
 
-<section id="about" class="px-6 md:px-16 py-12 bg-gray-900/50">
+<section id="about" class="px-6 md:px-16 py-20 bg-gray-900/50">
     <div class="max-w-4xl mx-auto">
-        <h2 class="text-3xl font-bold mb-12 flex items-center gap-4">
-            <span class="h-px flex-1 bg-gray-800"></span>
+        <h2 class="reveal text-3xl font-bold mb-12 flex items-center gap-4 bg-gradient-to-r from-blue-200 to-yellow-600 through-yellow-900 bg-clip-text text-transparent">
+            <span class="h-px flex-1 bg-gray-800 "></span>
             About Me
             <span class="h-px flex-1 bg-gray-800"></span>
         </h2>
@@ -88,7 +90,7 @@
                 I am a passionate <span class="text-white font-medium">professional teacher of Mathematics and Computing</span>, trained at 
                 <span class="text-white font-medium">NJA College of Education</span>. My journey into education was driven by a deep desire to empower young minds through logical reasoning, problem-solving, and digital literacy. Throughout my training and professional practice, I discovered that education is not only about imparting knowledge but also about inspiring innovation and transformation.
             </p>
-            <div id="extra-content" class="hidden space-y-6">
+            <div id="extra-content" class=" space-y-6">
 
             <p>
                 While teaching provided me with a strong foundation in communication, leadership, and mentorship, I soon realized that my true passion lay at the intersection of <span class="text-blue-400">education and technology</span>. I became fascinated by the idea that, beyond using digital tools in the classroom, I could actually <span class="italic text-purple-400">build</span> these tools to enhance learning experiences and solve real-world challenges. This realization marked the beginning of my transition into software development.
@@ -99,36 +101,36 @@
                 <span class="text-blue-400">Django</span>, <span class="text-blue-400">React</span>, and <span class="text-blue-400">Tailwind CSS</span>. My development approach combines analytical thinking from my mathematics background with creativity and empathy gained from my teaching experience, enabling me to design solutions that are both functional and impactful.
             </p>
 
-            <p>
+           <p class="reveal opacity-0 translate-y-10 transition-all duration-700">
                 During my time at college, I also served as the <span class="text-white font-medium">SRC Public Relations Officer</span>, a role that strengthened my leadership, teamwork, and communication skills. This experience taught me that the most successful technological solutions are not merely defined by their code but by their ability to address real human needs and foster meaningful connections within communities.
             </p>
 
-            <p>
+           <p class="reveal opacity-0 translate-y-10 transition-all duration-700">
                 My journey into technology has been significantly enhanced through the use of <span class="text-blue-400">Artificial Intelligence tools</span>, which have accelerated my learning and enabled me to tackle complex development challenges with confidence. As a <span class="text-white font-medium">certified AI-assisted developer</span> and an <span class="text-white font-medium">ethical hacking mentee</span>, I am committed to building secure, intelligent, and scalable digital systems that contribute positively to society.
             </p>
 
-            <p>
+            <p class="reveal opacity-0 translate-y-10 transition-all duration-700">
                 I am particularly passionate about developing <span class="italic text-purple-400">“Technology with a Purpose”</span>—solutions that empower students, support educators, and modernize everyday life. Whether it is creating educational platforms, community-driven applications, or innovative digital tools, my goal is to bridge the gap between pedagogy and technology.
             </p>
 
-            <p>
+           <p class="reveal opacity-0 translate-y-10 transition-all duration-700">
                 Beyond my professional pursuits, I am a lifelong learner with a keen interest in personal and intellectual growth. I have been exploring new languages, including Chinese, to broaden my global perspective and enhance cross-cultural communication. This commitment to continuous learning reflects my belief that growth and adaptability are essential in today’s rapidly evolving digital world.
             </p>
 
-            <p>
+          <p class="reveal opacity-0 translate-y-10 transition-all duration-700">
                 As I graduate in <span class="text-white font-medium">September</span>, I look forward to contributing my unique blend of educational expertise and technological innovation to organizations that value creativity, impact, and community development. I am eager to collaborate on projects that leverage technology to inspire change, improve access to education, and create meaningful digital experiences.
             </p>
 
-            <p>
+           <p class="reveal opacity-0 translate-y-10 transition-all duration-700">
                 In essence, my journey represents a seamless fusion of <span class="text-blue-400">education</span>, <span class="text-blue-400">technology</span>, and <span class="text-blue-400">community impact</span>. I am not just a teacher or a developer—I am an innovator committed to shaping a smarter and more inclusive future through purposeful technology.
             </p>
 
            
-                <p>
+                <p class="reveal opacity-0 translate-y-10 transition-all duration-700">
                     Every project I undertake reflects my dedication to excellence, usability, and social impact. I believe that technology should be accessible, inclusive, and transformative. By combining my teaching background with modern software engineering practices, I strive to create digital solutions that make a lasting difference in people’s lives.
                 </p>
 
-                <p>
+              <p class="reveal opacity-0 translate-y-10 transition-all duration-700">
                     If you are looking for a professional who blends pedagogical insight with technical expertise to build intelligent and meaningful solutions, I would be delighted to connect and collaborate.
                 </p>
             </div>
@@ -138,11 +140,42 @@
             </button>
         </div>
     </div>
+
+    <style>
+        .reveal {
+  opacity: 0;
+  transform: translateY(60px); /* start from below */
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+    </style>
+
+    <script>
+  function revealOnScroll() {
+    const reveals = document.querySelectorAll(".reveal");
+
+    reveals.forEach((el) => {
+      const windowHeight = window.innerHeight;
+      const elementTop = el.getBoundingClientRect().top;
+
+      if (elementTop < windowHeight - 100) {
+        el.classList.add("active");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", revealOnScroll);
+
+    </script>
 </section>
 <!-- Skills Section -->
 
-<section id="skills" class="px-6 md:px-16 py-12 border-t border-gray-800">
-     <h2 class="text-3xl font-bold mb-12 flex items-center gap-4">
+<section id="skills" class="px-6 md:px-16 py-20 border-t border-gray-800">
+     <h2 class="text-3xl font-bold mb-12 flex items-center gap-4 bg-gradient-to-r from-blue-200 to-yellow-600 through-yellow-900 bg-clip-text text-transparent">
             <span class="h-px flex-1 bg-gray-800"></span>
             Skills & Expertise
             <span class="h-px flex-1 bg-gray-800"></span>
@@ -173,194 +206,200 @@
 </section>
 <!-- Projects Section -->
 
-<section id="projects" class="px-6 md:px-16 py-12 bg-gray-900/30">
-    <h2 class="text-3xl md:text-4xl font-black mb-12 text-center">
-        Featured Projects
-    </h2>
+<section id="projects" class="px-6 md:px-16 py-20 bg-zinc-950">
+    <div class="max-w-7xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-4 bg-gradient-to-r from-blue-200 to-yellow-600 through-yellow-900 bg-clip-text text-transparent">Featured Projects</h2>
+        <p class="text-gray-400 text-center mb-12 max-w-md mx-auto">
+            Selected works that showcase my skills in full-stack development and educational technology
+        </p>
 
-    <!-- Projects Grid -->
-    <div id="projects-container"
-         class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <!-- Projects Grid -->
+        <div id="projects-container"
+             class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
 
-        <!-- ===== VISIBLE PROJECTS (First Three) ===== -->
-
-        <!-- Project 1 -->
-        <div class="group bg-gray-950 border border-gray-800 rounded-2xl overflow-hidden hover:border-blue-500 hover:shadow-xl transition duration-300">
-            <div class="h-44 overflow-hidden">
-                <img src="{% static 'images/projects/news.jpg' %}"
-                     alt="Jahan News Portal"
-                     class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-            </div>
-            <div class="p-5">
-                <h3 class="text-xl font-semibold mb-2">Jahan News Portal</h3>
-                <p class="text-gray-400 text-sm mb-4">
-                    A dynamic campus communication hub with real-time comments and admin dashboards.
-                </p>
-                <div class="flex flex-wrap gap-2 mb-4">
-                    <span class="text-xs bg-gray-800 px-2 py-1 rounded-full">Django</span>
-                    <span class="text-xs bg-gray-800 px-2 py-1 rounded-full">Tailwind</span>
+            <!-- Project 1 -->
+            <div class="group bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden hover:border-blue-500/60 hover:shadow-2xl transition-all duration-300">
+                <div class="h-24 overflow-hidden">
+                    <img src="{% static 'images/projects/news.jpg' %}"
+                         alt="Jahan News Portal"
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                 </div>
-                <div class="flex justify-between text-sm">
-                    <a href="#" class="text-blue-400 font-semibold hover:text-white transition">
-                        Live Demo
-                    </a>
-                    <a href="#" class="text-gray-500 hover:text-white transition">
-                        Source Code
-                    </a>
+                <div class="p-6">
+                    <h3 class="text-lg font-semibold mb-3 line-clamp-1">Jahan News Portal</h3>
+                    <p class="text-gray-400 text-sm mb-5 line-clamp-3">
+                        A dynamic campus communication hub with real-time comments and admin dashboards.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-xs bg-zinc-800 text-gray-300 px-3 py-1 rounded-full">Django</span>
+                        <span class="text-xs bg-zinc-800 text-gray-300 px-3 py-1 rounded-full">Tailwind</span>
+                    </div>
+                    <div class="flex justify-between items-center text-sm">
+                        <a href="#" class="text-blue-400 hover:text-blue-300 font-medium transition flex items-center gap-1">
+                            Live Demo →
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-gray-300 transition">
+                            Source Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="group bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden hover:border-blue-500/60 hover:shadow-2xl transition-all duration-300">
+                <div class="h-24 overflow-hidden">
+                    <img src="{% static 'images/projects/rent.jpg' %}"
+                         alt="RentEase"
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-lg font-semibold mb-3 line-clamp-1">RentEase</h3>
+                    <p class="text-gray-400 text-sm mb-5 line-clamp-3">
+                        Full-stack rental platform with interactive Google Maps integration.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-xs bg-zinc-800 text-gray-300 px-3 py-1 rounded-full">React</span>
+                        <span class="text-xs bg-zinc-800 text-gray-300 px-3 py-1 rounded-full">MySQL</span>
+                    </div>
+                    <div class="flex justify-between items-center text-sm">
+                        <a href="#" class="text-blue-400 hover:text-blue-300 font-medium transition flex items-center gap-1">
+                            Live Demo →
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-gray-300 transition">
+                            Source Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="group bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden hover:border-blue-500/60 hover:shadow-2xl transition-all duration-300">
+                <div class="h-24 overflow-hidden">
+                    <img src="{% static 'images/projects/research.jpg' %}"
+                         alt="Research Hub"
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-lg font-semibold mb-3 line-clamp-1">Research Hub</h3>
+                    <p class="text-gray-400 text-sm mb-5 line-clamp-3">
+                        AI-assisted platform for academic publishing and educational research.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-xs bg-zinc-800 text-gray-300 px-3 py-1 rounded-full">AI Tools</span>
+                        <span class="text-xs bg-zinc-800 text-gray-300 px-3 py-1 rounded-full">Python</span>
+                    </div>
+                    <div class="flex justify-between items-center text-sm">
+                        <a href="#" class="text-blue-400 hover:text-blue-300 font-medium transition flex items-center gap-1">
+                            Live Demo →
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-gray-300 transition">
+                            Source Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="group bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden hover:border-blue-500/60 hover:shadow-2xl transition-all duration-300">
+                <div class="h-24 overflow-hidden">
+                    <img src="{% static 'media/photos/collegeboxsiteimage.png' %}"
+                         alt="CollegeBox"
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-lg font-semibold mb-3 line-clamp-1">CollegeBox</h3>
+                    <p class="text-gray-400 text-sm mb-5 line-clamp-3">
+                        A collection of vetted action research for students, educators, and researchers.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-xs bg-zinc-800 text-gray-300 px-3 py-1 rounded-full">AI Tools</span>
+                        <span class="text-xs bg-zinc-800 text-gray-300 px-3 py-1 rounded-full">Python</span>
+                    </div>
+                    <div class="flex justify-between items-center text-sm">
+                        <a href="https://ar4tts.pythonanywhere.com/" 
+                           target="_blank"
+                           class="text-blue-400 hover:text-blue-300 font-medium transition flex items-center gap-1">
+                            Live Demo →
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-gray-300 transition">
+                            Source Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hidden Projects (same improved style) -->
+            <div class="extra-project hidden group bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden hover:border-blue-500/60 hover:shadow-2xl transition-all duration-300">
+                <div class="h-24 overflow-hidden">
+                    <img src="{% static 'media/photos/portfoliositeimage.png' %}"
+                         alt="Portfolio Website"
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-lg font-semibold mb-3 line-clamp-1">Portfolio Website</h3>
+                    <p class="text-gray-400 text-sm mb-5 line-clamp-3">
+                        A responsive personal portfolio built with Django and Tailwind CSS.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-xs bg-zinc-800 text-gray-300 px-3 py-1 rounded-full">Django</span>
+                        <span class="text-xs bg-zinc-800 text-gray-300 px-3 py-1 rounded-full">Tailwind</span>
+                    </div>
+                    <div class="flex justify-between items-center text-sm">
+                        <a href="https://balaarasolomonankyelle.pythonanywhere.com/" 
+                           target="_blank"
+                           class="text-blue-400 hover:text-blue-300 font-medium transition flex items-center gap-1">
+                            Live Demo →
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-gray-300 transition">
+                            Source Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second hidden project (same structure) -->
+            <div class="extra-project hidden group bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden hover:border-blue-500/60 hover:shadow-2xl transition-all duration-300">
+                <div class="h-24 overflow-hidden">
+                    <img src="{% static 'images/projects/portfolio.jpg' %}"
+                         alt="Portfolio Website"
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-lg font-semibold mb-3 line-clamp-1">Portfolio Website</h3>
+                    <p class="text-gray-400 text-sm mb-5 line-clamp-3">
+                        A responsive personal portfolio built with Django and Tailwind CSS.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-xs bg-zinc-800 text-gray-300 px-3 py-1 rounded-full">Django</span>
+                        <span class="text-xs bg-zinc-800 text-gray-300 px-3 py-1 rounded-full">Tailwind</span>
+                    </div>
+                    <div class="flex justify-between items-center text-sm">
+                        <a href="#" class="text-blue-400 hover:text-blue-300 font-medium transition flex items-center gap-1">
+                            Live Demo →
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-gray-300 transition">
+                            Source Code
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Project 2 -->
-        <div class="group bg-gray-950 border border-gray-800 rounded-2xl overflow-hidden hover:border-blue-500 hover:shadow-xl transition duration-300">
-            <div class="h-44 overflow-hidden">
-                <img src="{% static 'images/projects/rent.jpg' %}"
-                     alt="RentEase"
-                     class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-            </div>
-            <div class="p-5">
-                <h3 class="text-xl font-semibold mb-2">RentEase</h3>
-                <p class="text-gray-400 text-sm mb-4">
-                    Full-stack rental platform with interactive Google Maps integration.
-                </p>
-                <div class="flex flex-wrap gap-2 mb-4">
-                    <span class="text-xs bg-gray-800 px-2 py-1 rounded-full">React</span>
-                    <span class="text-xs bg-gray-800 px-2 py-1 rounded-full">MySQL</span>
-                </div>
-                <div class="flex justify-between text-sm">
-                    <a href="#" class="text-blue-400 font-semibold hover:text-white transition">
-                        Live Demo
-                    </a>
-                    <a href="#" class="text-gray-500 hover:text-white transition">
-                        Source Code
-                    </a>
-                </div>
-            </div>
+        <!-- View More Button -->
+        <div class="text-center mt-16">
+            <button id="toggleProjects"
+                    class="px-10 py-4 bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 hover:border-blue-500 text-white font-medium rounded-2xl transition-all duration-300">
+                View More Projects
+            </button>
         </div>
-
-        <!-- Project 3 -->
-        <div class="group bg-gray-950 border border-gray-800 rounded-2xl overflow-hidden hover:border-blue-500 hover:shadow-xl transition duration-300">
-            <div class="h-44 overflow-hidden">
-                <img src="{% static 'images/projects/research.jpg' %}"
-                     alt="Research Hub"
-                     class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-            </div>
-            <div class="p-5">
-                <h3 class="text-xl font-semibold mb-2">Research Hub</h3>
-                <p class="text-gray-400 text-sm mb-4">
-                    AI-assisted platform for academic publishing and educational research.
-                </p>
-                <div class="flex flex-wrap gap-2 mb-4">
-                    <span class="text-xs bg-gray-800 px-2 py-1 rounded-full">AI Tools</span>
-                    <span class="text-xs bg-gray-800 px-2 py-1 rounded-full">Python</span>
-                </div>
-                <div class="flex justify-between text-sm">
-                    <a href="#" class="text-blue-400 font-semibold hover:text-white transition">
-                        Live Demo
-                    </a>
-                    <a href="#" class="text-gray-500 hover:text-white transition">
-                        Source Code
-                    </a>
-                </div>
-            </div>
-        </div>
-         <!-- Project 4 -->
-        <div class="group bg-gray-950 border border-gray-800 rounded-2xl overflow-hidden hover:border-blue-500 hover:shadow-xl transition duration-300">
-            <div class="h-44 overflow-hidden">
-                <img src="{% static 'media/photos/collegeboxsiteimage.png' %}"
-                     alt="Research Hub"
-                     class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-            </div>
-            <div class="p-5">
-                <h3 class="text-xl font-semibold mb-2">CollegeBox</h3>
-                <p class="text-gray-400 text-sm mb-4">
-                    A collection of vetted action research for students, educators, and researchers to enhance learning and research productivity.
-                </p>
-                <div class="flex flex-wrap gap-2 mb-4">
-                    <span class="text-xs bg-gray-800 px-2 py-1 rounded-full">AI Tools</span>
-                    <span class="text-xs bg-gray-800 px-2 py-1 rounded-full">Python</span>
-                </div>
-                <div class="flex justify-between text-sm">
-                    <a href="https://ar4tts.pythonanywhere.com/" class="text-blue-400 font-semibold hover:text-white transition">
-                        Live Demo
-                    </a>
-                    <a href="#" class="text-gray-500 hover:text-white transition">
-                        Source Code
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- ===== HIDDEN PROJECTS ===== -->
-        <div class="extra-project hidden group bg-gray-950 border border-gray-800 rounded-2xl overflow-hidden hover:border-blue-500 hover:shadow-xl transition duration-300">
-            <div class="h-44 overflow-hidden">
-                <img src="{% static 'media/photos/portfoliositeimage.png' %}"
-                     alt="Portfolio Website"
-                     class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-            </div>
-            <div class="p-5">
-                <h3 class="text-xl font-semibold mb-2">Portfolio Website</h3>
-                <p class="text-gray-400 text-sm mb-4">
-                    A responsive personal portfolio built with Django and Tailwind CSS.
-                </p>
-                <div class="flex flex-wrap gap-2 mb-4">
-                    <span class="text-xs bg-gray-800 px-2 py-1 rounded-full">Django</span>
-                    <span class="text-xs bg-gray-800 px-2 py-1 rounded-full">Tailwind</span>
-                </div>
-                <div class="flex justify-between text-sm">
-                    <a href="https://balaarasolomonankyelle.pythonanywhere.com/" class="text-blue-400 font-semibold hover:text-white transition">
-                        Live Demo
-                    </a>
-                    <a href="#" class="text-gray-500 hover:text-white transition">
-                        Source Code
-                    </a>
-                </div>
-            </div>
-            
-        </div>
-         <div class="extra-project hidden group bg-gray-950 border border-gray-800 rounded-2xl overflow-hidden hover:border-blue-500 hover:shadow-xl transition duration-300">
-            <div class="h-44 overflow-hidden">
-                <img src="{% static 'images/projects/portfolio.jpg' %}"
-                     alt="Portfolio Website"
-                     class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-            </div>
-            <div class="p-5">
-                <h3 class="text-xl font-semibold mb-2">Portfolio Website</h3>
-                <p class="text-gray-400 text-sm mb-4">
-                    A responsive personal portfolio built with Django and Tailwind CSS.
-                </p>
-                <div class="flex flex-wrap gap-2 mb-4">
-                    <span class="text-xs bg-gray-800 px-2 py-1 rounded-full">Django</span>
-                    <span class="text-xs bg-gray-800 px-2 py-1 rounded-full">Tailwind</span>
-                </div>
-                <div class="flex justify-between text-sm">
-                    <a href="#" class="text-blue-400 font-semibold hover:text-white transition">
-                        Live Demo
-                    </a>
-                    <a href="#" class="text-gray-500 hover:text-white transition">
-                        Source Code
-                    </a>
-                </div>
-            </div>
-            
-        </div>
-    </div>
-
-    <!-- VIEW MORE BUTTON -->
-    <div class="text-center mt-12">
-        <button id="toggleProjects"
-                class="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-full transition">
-            View More Projects
-        </button>
     </div>
 </section>
 <!-- Certifications Section  -->
 
-<section id="certifications" class="px-6 md:px-16 py-12 border-t border-gray-800 bg-gray-950">
+<section id="certifications" class="px-6 md:px-16 py-20 border-t border-gray-800 bg-gray-950">
     <div class="max-w-6xl mx-auto">
-        <h2 class="text-3xl font-bold mb-12 flex items-center gap-4">
+        <h2 class="text-3xl font-bold mb-12 flex items-center gap-4 bg-gradient-to-r from-blue-200 to-yellow-600 through-yellow-900 bg-clip-text text-transparent">
             Certifications
-            <span class="h-px flex-1 bg-gray-800"></span>
+           
         </h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -433,9 +472,9 @@
 </section>
 <!-- Hobbies & Interests Section -->
 
-<section id="hobbies" class="px-6 md:px-16 py-12 border-t border-gray-800 bg-gray-950">
+<section id="hobbies" class="px-6 md:px-16 py-20 border-t border-gray-800 bg-gray-950">
     <div class="max-w-6xl mx-auto">
-        <h2 class="text-3xl font-bold mb-12 flex items-center gap-4">
+        <h2 class="text-3xl font-bold mb-12 flex items-center gap-4 bg-gradient-to-r from-blue-200 to-yellow-600 through-yellow-900 bg-clip-text text-transparent">
             Hobbies & Interests
             <span class="h-px flex-1 bg-gray-800"></span>
         </h2>
@@ -507,12 +546,12 @@
 </section>
 <!-- Contact Section -->
 
-<section id="contact" class="px-6 md:px-12 py-16 bg-blue-600 text-white">
+<section id="contact" class="px-6 md:px-12 py-20 bg-blue-600 text-white">
     <div class="max-w-6xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             
             <div>
-                <h2 class="text-4xl md:text-6xl font-black mb-6 leading-tight">
+                <h2 class="text-4xl md:text-6xl font-black mb-6 leading-tight bg-gradient-to-r from-blue-200 to-yellow-600 through-yellow-900 bg-clip-text text-transparent">
                     Let's build the <br> future together.
                 </h2>
                 <p class="text-blue-100 text-lg mb-10 max-w-md">
