@@ -68,6 +68,3 @@ def home(request):
 
     return render(request, 'home.html', {'form': form})
 
-def profile(request):
-    return render(request, 'profile.html')
-

@@ -13,13 +13,22 @@
 <nav class="sticky top-0 z-50 backdrop-blur-md bg-gray-950/80 border-b border-gray-800 px-6 md:px-16 py-4">
     <div class="flex justify-between items-center">
         <a href="{% url 'home' %}" class="flex items-center">
-            <img src="{% static 'media/photos/balaarashortlogo.jpg' %}" alt="Logo" class="h-10 w-auto block md:hidden rounded-lg">
-            <img src="{% static 'media/photos/balaarafulllogo.jpg' %}" alt="Full Logo" class="h-10 w-auto hidden md:block">
-        </a>
+    <img 
+        src="{% static 'media/photos/balaarashortlogo.jpg' %}" 
+        alt="Logo" 
+        class="h-10 w-auto block md:hidden rounded-lg brightness-20"
+    >
+
+    <img 
+        src="{% static 'media/photos/balaarafulllogo.jpg' %}" 
+        alt="Full Logo" 
+        class="h-10 w-auto hidden md:block brightness-50"
+    >
+</a>
 
         <ul class="hidden md:flex gap-8 text-sm font-medium text-gray-400">
             <li><a href="{% url 'home' %}" class="hover:text-blue-400 transition">Home</a></li>
-            <li><a href="{% url 'profile' %}" class="hover:text-blue-400 transition">Me</a></li>
+            
             <li><a href="{% url 'home' %}#about" class="hover:text-blue-400 transition">About</a></li>
             <li><a href="{% url 'home' %}#skills" class="hover:text-blue-400 transition">Skills</a></li>
             <li><a href="{% url 'home' %}#projects" class="hover:text-blue-400 transition">Projects</a></li>
@@ -34,7 +43,7 @@
 
     <ul id="mobile-menu" class="hidden flex-col gap-4 mt-4 text-gray-400 pb-4 md:hidden">
         <li><a href="{% url 'home' %}#home" class="block hover:text-white">Home</a></li>
-        <li><a href="{% url 'profile' %}" class="hover:text-blue-400 transition">Me</a></li>
+        
         <li><a href="{% url 'home' %}#about" class="block hover:text-white">About</a></li>
         <li><a href="{% url 'home' %}#skills" class="block hover:text-white">Skills</a></li>
         <li><a href="{% url 'home' %}#certifications" class="hover:text-blue-400 transition">Certifications</a></li>
@@ -68,10 +77,10 @@
                 <a href="{% url 'home' %}" class="flex-shrink-0">
                     <img src="{% static 'media/photos/balaarashortlogo.jpg' %}" 
                          alt="Logo" 
-                         class="h-11 w-auto block md:hidden rounded-xl">
+                         class="h-11 w-auto block md:hidden rounded-xl brightness-50">
                     <img src="{% static 'media/photos/balaarafulllogo.jpg' %}" 
                          alt="Full Logo" 
-                         class="h-11 w-auto hidden md:block">
+                         class="h-11 w-auto hidden md:block brightness-50">
                 </a>
                 
                 <div>
@@ -208,10 +217,11 @@
 
     // ===== CHANGING TEXT =====
     const texts = [
-        "I am a Software Developer",
-        "I am an Educator",
-        "I build Intelligent Systems",
-        " And I solve Real-world Problems"
+        "I'm an educator ",
+        "I'm a software developer ",
+        "A full-stack developer for matter ",
+        "I build intelligent systems ",
+        "That solve real-world problems "
     ];
 
     const textElement = document.getElementById("changing-text");
