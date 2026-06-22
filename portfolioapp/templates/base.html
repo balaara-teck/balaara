@@ -159,18 +159,7 @@
     const menu = document.getElementById('mobile-menu');
     btn.addEventListener('click', () => menu.classList.toggle('hidden'));
 
-    // About Me Toggle
-    function toggleAbout() {
-        const extra = document.getElementById('extra-content');
-        const btnText = document.getElementById('read-more-btn');
-        if (extra.classList.contains('hidden')) {
-            extra.classList.remove('hidden');
-            btnText.innerText = 'Read Less ↑';
-        } else {
-            extra.classList.add('hidden');
-            btnText.innerText = 'Read My Story ↓';
-        }
-    }
+   
 // Projects Toggle
     const toggleBtn = document.getElementById('toggleProjects');
     const extraProjects = document.querySelectorAll('.extra-project');
@@ -219,7 +208,7 @@
     const texts = [
         "I'm an educator ",
         "I'm a software developer ",
-        "A full-stack developer for matter ",
+        "A full-stack developer for that matter ",
         "I build intelligent systems ",
         "That solve real-world problems "
     ];
